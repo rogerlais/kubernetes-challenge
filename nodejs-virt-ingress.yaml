@@ -1,0 +1,12 @@
+#
+#! Haveria formas mais elegantes, mas o tempo impede
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nodejs-virt
+spec:
+  defaultBackend:
+    service:
+      name: nodejs-virt
+      port:
+        number: 80
